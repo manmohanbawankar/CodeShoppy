@@ -1,0 +1,106 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+{% load static %}
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Code Shoppy </title>
+<!--        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">-->
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="manifest" href="{% static 'site.webmanifest' %}">
+		<link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/img/favicon.ico' %}">
+
+		<!-- CSS here -->
+            <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+            <link rel="stylesheet" href="{% static 'assets/css/owl.carousel.min.css' %}">
+            <link rel="stylesheet" href="{% static 'assets/css/flaticon.css' %}">
+            <link rel="stylesheet" href="{% static 'assets/css/slicknav.css' %}">
+            <link rel="stylesheet" href="{% static 'assets/css/animate.min.css' %}">
+            <link rel="stylesheet" href="{% static 'assets/css/magnific-popup.css' %}">
+            <link rel="stylesheet" href="{% static 'assets/css/fontawesome-all.min.css' %}">
+            <link rel="stylesheet" href="{% static 'assets/css/themify-icons.css' %}">
+            <link rel="stylesheet" href="{% static 'assets/css/slick.css' %}">
+            <link rel="stylesheet" href="{% static 'assets/css/nice-select.css' %}">
+            <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+   </head>
+<body>
+
+    <!-- Preloader Start -->
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text">
+<!--                    <img src="{% static 'assets/img/logo/logo.png'%}" alt="">-->
+                                        <h6>Code Shoppy</h6>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Preloader Start -->
+
+    <header>
+        <!-- Header Start -->
+       <div class="header-area">
+            <div class="main-header ">
+                <div class="header-top top-bg d-none d-lg-block">
+                   <div class="container-fluid">
+                       <div class="col-xl-12">
+                            <div class="row d-flex justify-content-between align-items-center">
+                                <div class="header-info-left">
+                                    <ul>
+                                        <li><i class="fas fa-envelope"></i>info@CodeShoppy.com</li>
+                                    </ul>
+                                </div>
+                                <div class="header-info-right">
+                                    <ul class="header-social">
+
+                                    </ul>
+                                </div>
+                            </div>
+                       </div>
+                   </div>
+                </div>
+        <div class="header-bottom  header-sticky">
+                    <div class="container-fluid">
+                        <div class="row align-items-center">
+                            <!-- Logo -->
+                            <div>
+                                <div class="logo">
+                                  <a href="{% url 'unknown' %}"><h3>Code Shoppy</h3></a>
+                                </div>
+                            </div>
+                            <div >
+                                <!-- Main-menu -->
+                                <div class="main-menu f-right d-none d-lg-block">
+                                    <nav>
+                                        <ul id="navigation">
+                                            <li><a href="{% url 'customer_change' %}">ChangePassword</a></li>
+                                            <li><a href="{% url 'display' %}">Details</a></li>
+                                            <li><a href="{% url 'sell' %}">AddProject</a></li>
+                                            <li><a href ="{% url 'sellview_my' %}">MyProject</a></li>
+                                            <li><a href ="{% url 'sellview_all' %}">All Projects</a></li>
+                                            <li><a href ="{% url 'my_purchase' %}">MyPurchase</a></li>
+                                            <li><a href="{% url 'logout' %}">Logout</a></li>
+
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+
+                            <!-- Mobile Menu -->
+                            <div class="col-12">
+                                <div class="mobile_menu d-block d-lg-none"></div>
+                            </div>
+                        </div>
+                    </div>
+               </div>
+            </div>
+       </div>
+        <!-- Header End -->
+    </header>
+</body>
+</html>

@@ -1,0 +1,63 @@
+{% load static %}
+{% include 'customer_header.html' %}
+<main>
+
+        <!-- slider Area Start-->
+        <div class="slider-area ">
+            <!-- Mobile Menu -->
+            <div class="single-slider slider-height2 d-flex align-items-center" data-background="{% static 'assets/img/hero/contact_hero.jpg' %}">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="hero-cap text-center">
+                                <h2>Comment</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- slider Area End--><br>
+
+<form method ="POST" class="post-form" action="">
+    {% csrf_token %}
+    <section class="h-100">
+		<div class="container h-100">
+			<div class="row justify-content-sm-center h-100">
+				<div class="col-xxl-4 col-xl-5 col-lg-5 col-md-7 col-sm-9">
+					<div class="text-center my-5">
+<!--						<img src="https://getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo.svg" alt="logo" width="100">-->
+					</div>
+					<div class="card shadow-lg">
+						<div class="card-body p-5">
+							<h1 class="fs-4 card-title fw-bold mb-4">Comment Here</h1>
+							<form method="POST" class="needs-validation" novalidate="" autocomplete="off">
+                                <div class="mb-3">
+                                    <form method="POST" class="needs-validation" novalidate="" autocomplete="off">
+                                <div class="mb-3">
+									<label class="mb-2 text-muted" for="id">Id</label>
+									<input id="id" type="text" class="form-control" name="sell" value="{{id}}" readonly>
+								</div>
+                                <div class="mb-3">
+									<label class="mb-2 text-muted" for="email">Project Id</label>
+									<input id="email" type="text" class="form-control" name="customer" value="{{email}}"  readonly>
+								</div>
+                                 <div class="mb-3">
+                                        <label class="text-muted" for="Comment">Comment</label>
+                                        <input id ="Comment" type="text" name="comment" class="form-control" value="{{comment.comment}}" required autofocus/><br>
+                                 </div>
+								<div class="mb-3">
+                                        <label class="text-muted" for="rating">Rating</label>
+                                        <input id ="rating" type="number" name="rating" class="form-control" value="{{comment.rating}}" required autofocus/><br>
+								</div>
+                                <button type="submit" class="btn btn-primary ms-auto">Submit</button><br>
+							</form>
+						</div>
+					</div>
+                </div>
+			</div>
+		</div>
+	</section>
+</form>
+{{msg}}
+		{% include 'footer.html' %}

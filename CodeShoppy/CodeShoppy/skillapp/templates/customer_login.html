@@ -1,0 +1,58 @@
+{% load static %}
+{% include 'header.html' %}
+
+<main xmlns="http://www.w3.org/1999/html">
+
+        <!-- slider Area Start-->
+        <div class="slider-area ">
+            <!-- Mobile Menu -->
+            <div class="single-slider slider-height2 d-flex align-items-center" data-background="{% static 'assets/img/hero/contact_hero.jpg' %}">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="hero-cap text-center">
+                                <h2>Customer_Login</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- slider Area End-->
+
+    <br>
+
+    <center><h2>Login Here</h2></center>
+<center>
+<div class="col-lg-8">
+<form method ="POST" class="post-form" action="/customer_login/">
+{% csrf_token %}
+    <div class="row">
+
+								 <div class="col-12">
+									<div class="form-group">
+									<input id="email" type="email"  name="email" placeholder="Enter  Email" required>
+									</div>
+								</div>
+
+								 <div class="col-12">
+									<div class="form-group">
+                                        <input id="password" type="password"  name="password" placeholder="Enter Password" required>
+
+									</div>
+								</div>
+    </div>
+
+                                <button type="submit" class="btn btn-primary ms-auto">Login</button><br>
+                                U are not exist?<br> <a href="/regpage/" class=" btn-primary">Register</a>
+
+
+</form>
+</div>
+</center>
+    </main>
+<br>
+<br><br>
+<br><br>
+
+{% include 'footer.html' %}

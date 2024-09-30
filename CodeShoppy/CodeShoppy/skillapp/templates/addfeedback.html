@@ -1,0 +1,194 @@
+{% load static %}
+{% include 'admin_header.html' %}
+    <main>
+
+        <!-- slider Area Start-->
+        <div class="slider-area ">
+            <!-- Mobile Menu -->
+            <div class="single-slider slider-height2 d-flex align-items-center" data-background="{% static 'assets/img/hero/contact_hero.jpg' %}">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="hero-cap text-center">
+                                <h2>Addfeedback</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- slider Area End-->
+<main>
+
+<body>
+    <form method ="POST" class="post-form" action="{% url 'addfeedback' %}" enctype="multipart/form-data">
+{% csrf_token %}
+  <section class="h-100">
+		<div class="container h-100">
+			<div class="row justify-content-sm-center h-100">
+				<div class="col-xxl-4 col-xl-5 col-lg-5 col-md-7 col-sm-9">
+					<div class="text-center my-5">
+					</div>
+					<div class="card shadow-lg">
+						<div class="card-body p-5">
+							<h1 class="fs-4 card-title fw-bold mb-4">Add FeedBack</h1>
+                                <div class="mb-3">
+									<label class="mb-2 text-muted" for="Name">Name</label>
+									<input id="Name" type="text" class="form-control" name="Name" value="" required autofocus>
+								</div>
+
+                                <div class="mb-3">
+									<label class="mb-2 text-muted" for="Email">Email</label>
+									<input id="Email" type="Email" class="form-control" name="Email" value="" required autofocus>
+								</div>
+<!--								<div class="form-group row">-->
+<!--                                <h3 class="mb-2 pb-1">Message</h3>-->
+<!--                                <input type="text" name="Message" placeholder="enter Message" required><br>-->
+<!--                                </div><br>-->
+                            <div class="mb-3">
+									<label class="mb-2 text-muted" for="Message">Message</label>
+									<input id="Message" type="text" class="form-control" name="Message" value="" required autofocus>
+								</div>
+
+								<div class="col-sm-4">
+                                <button type="Submit" class="btn btn-primary">Submit</button><br>
+                                </div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+</form>
+<footer>
+       <!-- Footer Start-->
+       <div class="footer-area footer-padding">
+           <div class="container">
+               <div class="row d-flex justify-content-between">
+                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
+                      <div class="single-footer-caption mb-50">
+                        <div class="single-footer-caption mb-30">
+                             <!-- logo -->
+                            <div class="footer-logo">
+                                <a href="#"><h3>Skill Shoppy</h3></a>
+                            </div>
+                            <div class="footer-tittle">
+                                <div class="footer-pera">
+                                    <p>Lorem ipsum dolor sit amet, adipiscing elit, sed do eiusmod</p>
+                               </div>
+                            </div>
+                            <!-- social -->
+                            <div class="footer-social">
+                                <a href="#"><i class="fab fa-facebook-square"></i></a>
+                                <a href="#"><i class="fab fa-twitter-square"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-pinterest-square"></i></a>
+                            </div>
+                        </div>
+                      </div>
+                   </div>
+                   <div class="col-xl-2 col-lg-2 col-md-4 col-sm-5">
+                       <div class="single-footer-caption mb-50">
+                           <div class="footer-tittle">
+                               <h4>Company</h4>
+                               <ul>
+<!--                                   <li><a href="admini_login/">Login</a></li>-->
+                                   <li><a href="admini_change/">Change Password </a></li>
+                                   <li><a href="admini_display/">Display</a></li>
+                                   <li><a href="admini_mypurchase/">Mypurchase</a></li>
+                                   <li><a href="addfeedback/">Addfeedback</a></li>
+                                   <li><a href="viewfeedback/">Viewfeedback</a></li>
+                                   <li><a href="viewcomment/">Viewcomment</a></li>
+                                   <li><a href="admini_logout/">Logout</a></li>
+                               </ul>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-xl-3 col-lg-3 col-md-4 col-sm-7">
+                       <div class="single-footer-caption mb-50">
+                           <div class="footer-tittle">
+                               <h4>Services</h4>
+                               <ul>
+                                   <li><a href="#">Commercial Cleaning</a></li>
+                                   <li><a href="#">Office Cleaning</a></li>
+                                   <li><a href="#">Building Cleaning</a></li>
+                                   <li><a href="#">Floor Cleaning</a></li>
+                                   <li><a href="#">Apartment Cleaning</a></li>
+                               </ul>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
+                       <div class="single-footer-caption mb-50">
+                           <div class="footer-tittle">
+                               <h4>Get in Touch</h4>
+                               <ul>
+                                <li><a href="#">152-515-6565</a></li>
+                                <li><a href="#"> Demomail@gmail.com</a></li>
+                                <li><a href="#">New Orleans, USA</a></li>
+                            </ul>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+       <!-- footer-bottom aera -->
+       <div class="footer-bottom-area footer-bg">
+           <div class="container">
+               <div class="footer-border">
+                    <div class="row d-flex align-items-center">
+                        <div class="col-xl-12 ">
+                            <div class="footer-copy-right text-center">
+                                <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="ti-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                            </div>
+                        </div>
+                    </div>
+               </div>
+           </div>
+       </div>
+       <!-- Footer End-->
+   </footer>
+        <!-- JS here -->
+
+		<!-- All JS Custom Plugins Link Here here -->
+        <script src="{% static './assets/js/vendor/modernizr-3.5.0.min.js' %}"></script>
+
+		<!-- Jquery, Popper, Bootstrap -->
+		<script src="{% static './assets/js/vendor/jquery-1.12.4.min.js' %}"></script>
+        <script src="{% static './assets/js/popper.min.js' %}"></script>
+        <script src="{% static './assets/js/bootstrap.min.js' %}"></script>
+	    <!-- Jquery Mobile Menu -->
+        <script src="{% static './assets/js/jquery.slicknav.min.js' %}"></script>
+
+		<!-- Jquery Slick , Owl-Carousel Plugins -->
+        <script src="{% static './assets/js/owl.carousel.min.js' %}"></script>
+        <script src="{% static './assets/js/slick.min.js' %}"></script>
+
+		<!-- One Page, Animated-HeadLin -->
+        <script src="{% static './assets/js/wow.min.js' %}"></script>
+		<script src="{% static './assets/js/animated.headline.js' %}"></script>
+        <script src="{% static './assets/js/jquery.magnific-popup.js' %}"></script>
+
+		<!-- Scrollup, nice-select, sticky -->
+        <script src="{% static './assets/js/jquery.scrollUp.min.js' %}"></script>
+        <script src="{% static './assets/js/jquery.nice-select.min.js' %}"></script>
+		<script src="{% static './assets/js/jquery.sticky.js' %}"></script>
+
+        <!-- contact js -->
+        <script src="{% static './assets/js/contact.js' %}"></script>
+        <script src="{% static './assets/js/jquery.form.js' %}"></script>
+        <script src="{% static './assets/js/jquery.validate.min.js' %}"></script>
+        <script src="{% static './assets/js/mail-script.js' %}"></script>
+        <script src="{% static './assets/js/jquery.ajaxchimp.min.js' %}"></script>
+
+		<!-- Jquery Plugins, main Jquery -->
+        <script src="{% static './assets/js/plugins.js' %}"></script>
+        <script src="{% static './assets/js/main.js' %}"></script>
+    </main>
+</body>
+</html>
+

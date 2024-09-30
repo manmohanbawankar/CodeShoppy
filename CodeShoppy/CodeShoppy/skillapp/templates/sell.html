@@ -1,0 +1,81 @@
+{% load static %}
+{% include 'customer_header.html' %}
+<main>
+    <div class="slider-area ">
+        <div class="single-slider slider-height2 d-flex align-items-center" data-background="{% static 'assets/img/hero/contact_hero.jpg' %}">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="hero-cap text-center">
+                            <h2>Add Project</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><br>
+    <body>
+<form method ="POST" class="post-form" action="/sell/">
+    {% csrf_token %}
+    <section class="h-100">
+		<div class="container h-100">
+			<div class="row justify-content-sm-center h-100">
+				<div class="col-xxl-4 col-xl-5 col-lg-5 col-md-7 col-sm-9">
+					<div class="text-center my-5">
+<!--						<img src="https://getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo.svg" alt="logo" width="100">-->
+					</div>
+					<div class="card shadow-lg">
+						<div class="card-body p-5">
+							<h1 class="fs-4 card-title fw-bold mb-4">Project Details Add Here</h1>
+							<form method="POST" class="needs-validation" novalidate="" autocomplete="off">
+                                <div class="mb-3">
+									<label class="mb-2 text-muted" for="customer">Customer Id</label>
+									<input id="customer" type="email" class="form-control" name="customer" value="{{email}}" readonly/>
+								</div>
+								<div class="mb-3">
+									<label class="mb-2 text-muted" for="title">Title</label>
+									<input id="title" type="text" class="form-control" name="title" required>
+								</div>
+
+								<div class="mb-3">
+									<div class="mb-2 w-100">
+										<label class="text-muted" for="description">Description</label>
+									</div>
+									<input id="description" type="text" class="form-control" name="description" required>
+								</div>
+                                <div class="mb-3">
+									<div class="mb-2 w-100">
+										<label class="text" for="cost">Cost</label>
+									</div>
+									<input id="cost" type="number" class="form-control" name="cost" required>
+								</div>
+								<div class="mb-3">
+									<div class="mb-2 w-100">
+										<label class="text" for="technologies">Technologies</label>
+									</div>
+									<input id="technologies" type="text" class="form-control" name="technologies" required>
+								</div>
+								<div class="mb-3">
+									<div class="mb-2 w-100">
+										<label class="domain" for="domain">Domain</label>
+									</div>
+									<input id="domain" type="text" class="form-control" name="domain" required>
+								</div>
+								<div class="mb-3">
+                                  <label class="datetime" for="datetime">Datetime</label>
+                                <div class="mb-2 w-100">
+                                   <input  id="datetime" type="date" name="datetime" class="form-control" requried/>
+								</div>
+
+
+                                <button type="submit" class="btn btn-primary ms-auto">Submit</button><br>
+							</form>
+						</div>
+					</div>
+                </div>
+			</div>
+		</div>
+	</section>
+</form>
+
+{% include 'footer.html' %}

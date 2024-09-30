@@ -1,0 +1,88 @@
+{% load static %}
+{% include 'header.html' %}
+<main>
+
+        <!-- slider Area Start-->
+        <div class="slider-area ">
+            <!-- Mobile Menu -->
+            <div class="single-slider slider-height2 d-flex align-items-center" data-background="{% static 'assets/img/hero/contact_hero.jpg' %}">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="hero-cap text-center">
+                                <h2>Customer_register</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- slider Area End-->
+
+
+<form method ="POST" class="post-form" action="/customer_reg/">
+    {% csrf_token %}
+    <section class="h-100">
+		<div class="container h-100">
+			<div class="row justify-content-sm-center h-100">
+				<div class="col-xxl-4 col-xl-5 col-lg-5 col-md-7 col-sm-9">
+					<div class="text-center my-5">
+<!--						<img src="https://getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo.svg" alt="logo" width="100">-->
+					</div>
+					<div class="card shadow-lg">
+						<div class="card-body p-5">
+							<h1 class="fs-4 card-title fw-bold mb-4">Register Here</h1>
+							<form method="POST" class="needs-validation" novalidate="" autocomplete="off">
+                                <div class="mb-3">
+									<label class="mb-2 text-muted" for="fullname">Fullname</label>
+									<input id="fullname" type="text" class="form-control" name="fullname" value="" placeholder="FullName" required autofocus>
+									<div class="invalid-feedback">
+										Email is invalid
+									</div>
+								</div>
+								<div class="mb-3">
+									<label class="mb-2 text-muted" for="email">Email</label>
+									<input id="email" type="email" class="form-control" name="email" value="" placeholder="Email" required autofocus>
+									<div class="invalid-feedback">
+										Email is invalid
+									</div>
+								</div>
+
+								<div class="mb-3">
+									<div class="mb-2 w-100">
+										<label class="text-muted" for="password">Password</label>
+									</div>
+									<input id="password" type="password" class="form-control" name="password" placeholder="Password" required>
+								</div>
+                                <div class="mb-3">
+									<div class="mb-2 w-100">
+										<label class="text" for="mobile">Mobile</label>
+									</div>
+									<input id="mobile" type="number" class="form-control" name="mobile" required placeholder="Mobile">
+								</div>
+                                <div class="mb-3">
+									<div class="mb-2 w-100">
+										<label class="text" for="city">City</label>
+									</div>
+                                    <select name="city">
+                                        <option value="Hyd">Hyd</option>
+                                        <option value="Pune">Pune</option>
+                                        <option value="Chennai">Chennai</option>
+                                        <option value="Mumbai">Mumbai</option>
+                                    </select>
+								</div><br>
+								<br>
+								<button type="submit" class="btn btn-primary ms-auto">Register</button><br>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</form>
+</main>
+{% include 'footer.html' %}
+
+
+

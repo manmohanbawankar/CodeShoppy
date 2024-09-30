@@ -1,0 +1,51 @@
+{% load static %}
+{% include 'customer_header.html' %}
+    <main>
+        <!-- slider Area Start-->
+        <div class="slider-area ">
+            <!-- Mobile Menu -->
+            <div class="single-slider slider-height2 d-flex align-items-center" data-background="{% static 'assets/img/hero/contact_hero.jpg' %}">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="hero-cap text-center">
+                                <h2>My Purchase</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- slider Area End--><br>
+
+
+<table align="center" border="1" cellpadding="10" cellspacing="0" width="80%">
+  <thead>
+     <tr>
+         <th>Id</th>
+         <th>Email</th>
+         <th>Project Title</th>
+         <th>cost</th>
+         <th>description</th>
+
+     </tr>
+  </thead>
+    <tbody>
+    {% for buy in buys %}
+       <tr>
+           <td>{{buy.id}}</td>
+           <td>{{buy.customer.email}}</td>
+           <td>{{buy.sell.title}}</td>
+           <td>{{buy.cost}}</td>
+           <td>{{buy.description}}</td>
+       </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+
+        <br>
+        <br>
+        <br>
+{% include 'footer.html' %}
+    </main>

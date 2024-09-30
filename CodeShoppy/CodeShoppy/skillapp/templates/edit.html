@@ -1,0 +1,287 @@
+{% load static %}
+{% include 'customer_header.html' %}
+    <main>
+        <!-- slider Area Start-->
+        <div class="slider-area ">
+            <!-- Mobile Menu -->
+            <div class="single-slider slider-height2 d-flex align-items-center" data-background="{% static 'assets/img/hero/contact_hero.jpg' %}">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="hero-cap text-center">
+                                <h2>Edit</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- slider Area End--><br>
+
+
+<body>
+<form method ="POST" class="post-form" action="{% url 'update' %}">
+    {% csrf_token %}
+    <section class="h-100">
+		<div class="container h-100">
+			<div class="row justify-content-sm-center h-100">
+				<div class="col-xxl-4 col-xl-5 col-lg-5 col-md-7 col-sm-9">
+					<div class="text-center my-5">
+<!--						<img src="https://getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo.svg" alt="logo" width="100">-->
+					</div>
+					<div class="card shadow-lg">
+						<div class="card-body p-5">
+							<h1 class="fs-4 card-title fw-bold mb-4">Update Here</h1>
+							<form method="POST" class="needs-validation" novalidate="" autocomplete="off">
+                                <div class="mb-3">
+									<label class="mb-2 text-muted" for="id">Id</label>
+									<input id="id" type="text" class="form-control" name="id" value="{{customer.id}}" required autofocus>
+								</div>
+                                <div class="mb-3">
+									<label class="mb-2 text-muted" for="fullname">Fullname</label>
+									<input id="fullname" type="text" class="form-control" name="fullname" value="{{customer.fullname}}" required autofocus>
+								</div>
+								<div class="mb-3">
+									<label class="mb-2 text-muted" for="email">Email</label>
+									<input id="email" type="email" class="form-control" name="email" value="{{customer.email}}" required autofocus>
+								</div>
+
+								<div class="mb-3">
+									<div class="mb-2 w-100">
+										<label class="text-muted" for="password">Password</label>
+									</div>
+									<input id="password" type="password" class="form-control" name="password" value="{{customer.password}}" required>
+								</div>
+                                <div class="mb-3">
+									<div class="mb-2 w-100">
+										<label class="text" for="mobile">Mobile</label>
+									</div>
+									<input id="mobile" type="number" class="form-control" name="mobile" value="{{customer.mobile}}" required>
+								</div>
+                                <div class="mb-3">
+									<div class="mb-2 w-100">
+										<label class="text" for="city">City</label>
+									</div>
+                                    <select value="{{customer.city}}" name="city">
+                                        <option value="Hyd">Hyd</option>
+                                        <option value="Pune">Pune</option>
+                                        <option value="Chennai">Chennai</option>
+                                        <option value="Mumbai">Mumbai</option>
+                                    </select>
+								</div><br>
+                                <br>
+
+									<button type="submit" class="btn btn-primary ms-auto">submit</button><br>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</form>
+<footer>
+       <!-- Footer Start-->
+       <div class="footer-area footer-padding">
+           <div class="container">
+               <div class="row d-flex justify-content-between">
+                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
+                      <div class="single-footer-caption mb-50">
+                        <div class="single-footer-caption mb-30">
+                             <!-- logo -->
+                            <div class="footer-logo">
+                                <a href="#"><h3>Skill Shoppy</h3></a>
+                            </div>
+                            <div class="footer-tittle">
+                                <div class="footer-pera">
+                                    <p>Lorem ipsum dolor sit amet, adipiscing elit, sed do eiusmod</p>
+                               </div>
+                            </div>
+                            <!-- social -->
+                            <div class="footer-social">
+                                <a href="#"><i class="fab fa-facebook-square"></i></a>
+                                <a href="#"><i class="fab fa-twitter-square"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-pinterest-square"></i></a>
+                            </div>
+                        </div>
+                      </div>
+                   </div>
+                   <div class="col-xl-2 col-lg-2 col-md-4 col-sm-5">
+                       <div class="single-footer-caption mb-50">
+                           <div class="footer-tittle">
+                               <h4>Company</h4>
+                               <ul>
+                                   <li><a href="change/">Change Password</a></li>
+                                   <li><a href="display/">Display</a></li>
+                                   <li><a href="sell/">sell</a></li>
+                                   <li><a href="sellview_my/">View My </a></li>
+                                   <li><a href="sellview_all/">View All </a></li>
+                                   <li><a href="my_purchase/">MY Purchase </a></li>
+                                   <li><a href="logout/">Logout</a></li>
+
+
+
+                               </ul>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-xl-3 col-lg-3 col-md-4 col-sm-7">
+                       <div class="single-footer-caption mb-50">
+                           <div class="footer-tittle">
+                               <h4>Services</h4>
+                               <ul>
+                                   <li><a href="#">Commercial Cleaning</a></li>
+                                   <li><a href="#">Office Cleaning</a></li>
+                                   <li><a href="#">Building Cleaning</a></li>
+                                   <li><a href="#">Floor Cleaning</a></li>
+                                   <li><a href="#">Apartment Cleaning</a></li>
+                               </ul>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
+                       <div class="single-footer-caption mb-50">
+                           <div class="footer-tittle">
+                               <h4>Get in Touch</h4>
+                               <ul>
+                                <li><a href="#">152-515-6565</a></li>
+                                <li><a href="#"> Demomail@gmail.com</a></li>
+                                <li><a href="#">New Orleans, USA</a></li>
+                            </ul>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+<footer>
+       <!-- Footer Start-->
+       <div class="footer-area footer-padding">
+           <div class="container">
+               <div class="row d-flex justify-content-between">
+                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
+                      <div class="single-footer-caption mb-50">
+                        <div class="single-footer-caption mb-30">
+                             <!-- logo -->
+                            <div class="footer-logo">
+                                <a href="index.html"><img src="{% static 'assets/img/logo/logo2_footer.png' %}" alt=""></a>
+                            </div>
+                            <div class="footer-tittle">
+                                <div class="footer-pera">
+                                    <p>Lorem ipsum dolor sit amet, adipiscing elit, sed do eiusmod</p>
+                               </div>
+                            </div>
+                            <!-- social -->
+                            <div class="footer-social">
+                                <a href="#"><i class="fab fa-facebook-square"></i></a>
+                                <a href="#"><i class="fab fa-twitter-square"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-pinterest-square"></i></a>
+                            </div>
+                        </div>
+                      </div>
+                   </div>
+                   <div class="col-xl-2 col-lg-2 col-md-4 col-sm-5">
+                       <div class="single-footer-caption mb-50">
+                           <div class="footer-tittle">
+                               <h4>Company</h4>
+                               <ul>
+                                   <li><a href="change/">Change Password</a></li>
+                                   <li><a href="display/">Display</a></li>
+                                   <li><a href="sell/">sell</a></li>
+                                   <li><a href="sellview_my/">View My </a></li>
+                                   <li><a href="sellview_all/">View All </a></li>
+                                   <li><a href="my_purchase/">MY Purchase </a></li>
+                                   <li><a href="logout/">Logout</a></li>
+
+
+
+                               </ul>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-xl-3 col-lg-3 col-md-4 col-sm-7">
+                       <div class="single-footer-caption mb-50">
+                           <div class="footer-tittle">
+                               <h4>Services</h4>
+                               <ul>
+                                   <li><a href="#">Commercial Cleaning</a></li>
+                                   <li><a href="#">Office Cleaning</a></li>
+                                   <li><a href="#">Building Cleaning</a></li>
+                                   <li><a href="#">Floor Cleaning</a></li>
+                                   <li><a href="#">Apartment Cleaning</a></li>
+                               </ul>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
+                       <div class="single-footer-caption mb-50">
+                           <div class="footer-tittle">
+                               <h4>Get in Touch</h4>
+                               <ul>
+                                <li><a href="#">152-515-6565</a></li>
+                                <li><a href="#"> Demomail@gmail.com</a></li>
+                                <li><a href="#">New Orleans, USA</a></li>
+                            </ul>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+       <!-- footer-bottom aera -->
+       <div class="footer-bottom-area footer-bg">
+           <div class="container">
+               <div class="footer-border">
+                    <div class="row d-flex align-items-center">
+                        <div class="col-xl-12 ">
+                            <div class="footer-copy-right text-center">
+                            </div>
+                        </div>
+                    </div>
+               </div>
+           </div>
+       </div>
+       <!-- Footer End-->
+   </footer>
+        <!-- JS here -->
+
+		<!-- All JS Custom Plugins Link Here here -->
+        <script src="{% static './assets/js/vendor/modernizr-3.5.0.min.js' %}"></script>
+
+		<!-- Jquery, Popper, Bootstrap -->
+		<script src="{% static './assets/js/vendor/jquery-1.12.4.min.js' %}"></script>
+        <script src="{% static './assets/js/popper.min.js' %}"></script>
+        <script src="{% static './assets/js/bootstrap.min.js' %}"></script>
+	    <!-- Jquery Mobile Menu -->
+        <script src="{% static './assets/js/jquery.slicknav.min.js' %}"></script>
+
+		<!-- Jquery Slick , Owl-Carousel Plugins -->
+        <script src="{% static './assets/js/owl.carousel.min.js' %}"></script>
+        <script src="{% static './assets/js/slick.min.js' %}"></script>
+
+		<!-- One Page, Animated-HeadLin -->
+        <script src="{% static './assets/js/wow.min.js' %}"></script>
+		<script src="{% static './assets/js/animated.headline.js' %}"></script>
+        <script src="{% static './assets/js/jquery.magnific-popup.js' %}"></script>
+
+		<!-- Scrollup, nice-select, sticky -->
+        <script src="{% static './assets/js/jquery.scrollUp.min.js' %}"></script>
+        <script src="{% static './assets/js/jquery.nice-select.min.js' %}"></script>
+		<script src="{% static './assets/js/jquery.sticky.js' %}"></script>
+
+        <!-- contact js -->
+        <script src="{% static './assets/js/contact.js' %}"></script>
+        <script src="{% static './assets/js/jquery.form.js' %}"></script>
+        <script src="{% static './assets/js/jquery.validate.min.js' %}"></script>
+        <script src="{% static './assets/js/mail-script.js' %}"></script>
+        <script src="{% static './assets/js/jquery.ajaxchimp.min.js' %}"></script>
+
+		<!-- Jquery Plugins, main Jquery -->
+        <script src="{% static './assets/js/plugins.js' %}"></script>
+        <script src="{% static './assets/js/main.js' %}"></script>
+    </main>
+</body>
+</html>
+

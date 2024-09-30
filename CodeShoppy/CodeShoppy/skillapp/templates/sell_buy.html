@@ -1,0 +1,67 @@
+{% load static %}
+{% include 'customer_header.html' %}
+    <main>
+
+        <!-- slider Area Start-->
+        <div class="slider-area ">
+            <!-- Mobile Menu -->
+            <div class="single-slider slider-height2 d-flex align-items-center" data-background="{% static 'assets/img/hero/contact_hero.jpg' %}">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="hero-cap text-center">
+                                <h2>Project_Buy</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- slider Area End--><br>
+
+
+<form method ="POST" class="post-form" action="">
+    {% csrf_token %}
+    <section class="h-100">
+		<div class="container h-100">
+			<div class="row justify-content-sm-center h-100">
+				<div class="col-xxl-4 col-xl-5 col-lg-5 col-md-7 col-sm-9">
+					<div class="text-center my-5">
+<!--						<img src="https://getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo.svg" alt="logo" width="100">-->
+					</div>
+					<div class="card shadow-lg">
+						<div class="card-body p-5">
+							<form method="POST" class="needs-validation" novalidate="" autocomplete="off">
+                                <div class="mb-3">
+									<label class="mb-2 text-muted" for="id">project Id</label>
+									<input id="id" type="text" class="form-control" name="sell" value="{{id}}" required autofocus readonly>
+								</div>
+
+								 <div class="mb-3">
+									<label class="mb-2 text-muted" for="id">Buyer Id</label>
+									<input id="id" type="text" class="form-control" name="customer" value="{{customer}}" required autofocus readonly>
+								</div>
+
+                                <div class="mb-3">
+									<div class="mb-2 w-100">
+										<label class="text" for="cost">Cost</label>
+									</div>
+									<input id="cost" type="number" class="form-control" name="cost" value="{{cost}}" required readonly>
+								</div>
+                                <div class="mb-3">
+									<div class="mb-2 w-100">
+										<label class="text" for="description">Description</label>
+									</div>
+									<input id="description" type="text" class="form-control" name="description" value="{{description}}" required readonly>
+								</div>
+									<button type="submit" class="btn btn-primary ms-auto">submit</button><br>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</form>
+{{msg}}
+		{% include 'footer.html' %}
